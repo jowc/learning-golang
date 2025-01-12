@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+func About() {
+	myself := "I love everything tech."
+	fmt.Print(myself)
+}
+
 func Loop() {
 	x := 5
 
