@@ -13,17 +13,18 @@ var cars [2]string
 func main() {
 	var name = "John"
 	lastName := "Doe"
-	var age uint8 = 25
+	var age uint8 = 65
 	height := 1.75
 	banks := []string{"kuda", "moniepoint"}
 	banks = append(banks, "mercedis")
 	cars = [2]string{"hp", "honda"}
 	text := "some random long text i want to slice for practice purpose."
 	slicedText := text[:12] + "..."
-	spliceText := strings.Split(strings.ToTitle(text), "")
+	spliceText := strings.Split(strings.ToTitle(text), " ")
 	myNumbers := []int{10, 40, 73, 23, 78, 54}
 	sort.Ints(myNumbers)
 	sort.Strings(spliceText)
+	african := true
 
 	// while loop
 	for 20 < age {
@@ -34,6 +35,13 @@ func main() {
 	// for loop
 	for i:= 20; i <= int(age); i++ {
 		fmt.Printf("for looping %v \n", i)
+	}
+
+	// for in loop
+	for _, value := range banks {
+		if african {
+			fmt.Printf("At index: %v \n", value)
+		}
 	}
 
 	fmt.Println(name, lastName, age, height)
