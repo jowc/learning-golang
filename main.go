@@ -10,6 +10,18 @@ var major = "computing"
 
 var cars [2]string
 
+// use funtions as callback
+
+func callNameOfCar(name string) string {
+	return "Car name: " + name + " \n"
+}
+
+func callMe(cars []string, f func(string) string) {
+	for _, car := range cars {
+		fmt.Print(f(car))
+	}
+}
+
 func main() {
 	var name = "John"
 	lastName := "Doe"
@@ -33,7 +45,7 @@ func main() {
 	}
 
 	// for loop
-	for i:= 20; i <= int(age); i++ {
+	for i := 20; i <= int(age); i++ {
 		fmt.Printf("for looping %v \n", i)
 	}
 
@@ -43,6 +55,8 @@ func main() {
 			fmt.Printf("At index: %v \n", value)
 		}
 	}
+
+	callMe([]string{"Honda", "Toyota"}, callNameOfCar)
 
 	fmt.Println(name, lastName, age, height)
 	fmt.Printf("hello %v in %v, I love %v.\n I bank with %v \n", name, major, cars[1], banks[1])

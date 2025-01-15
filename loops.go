@@ -40,3 +40,17 @@ func guessName(input string){
 			fmt.Printf("Wrong guess.")
 	}
 }
+
+//use funtions as callback
+// func callNameOfCar(name string) string {
+// 	return "Car name: " + name + " \n"
+// }
+
+
+// func callBack(cars []string, f func(string) string) {
+// 	for _, car := range cars {
+// 		fmt.Print(f(car))
+// 	}
+// }
+
+// callBack([]string{"Honda", "Toyota"}, callNameOfCar)
